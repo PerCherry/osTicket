@@ -194,6 +194,8 @@ extends SessionBackend {
         catch (OrmException $e) {
             return false;
         }
+        if ($this->data->session_data == null)
+            return '';
         return $this->data->session_data;
     }
 
